@@ -41,7 +41,7 @@ public class CardOrderTest {
     void shouldSendForm() {
         driver.get("http://localhost:9999");
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Иванов Иван");
-        driver.findElement(By.cssSelector("[type='text']")).sendKeys("+79009329393");
+        driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79009329393");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector("button")).click();
         String actual = driver.findElement(By.cssSelector(".Success_successBlock__2L3Cw")).getText().trim();
